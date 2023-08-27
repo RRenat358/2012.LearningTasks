@@ -1,4 +1,4 @@
-
+## The moment the first ant falls off the board
 
 We have a wooden plank of the length n units.  
 Two ants are walking on the plank,  
@@ -6,7 +6,6 @@ each ant moves with a speed of 1 unit per round.
 One ant moves to the left, the other moves to the right.  
 At one round, each ant makes a move.  
 Ant walking to the left moves first.
-
 
 If an ant is going to move to a point that is already occupied by another ant,  
 then each of the ants change direction and only after that the current ant moves.  
@@ -32,6 +31,8 @@ Constraints:
 0 <= right <= n  
 left != right
 
+\
+\
 ![img_1](image_1.png)
 ![image_2](image_2.png)
 

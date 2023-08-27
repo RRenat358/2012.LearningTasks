@@ -1,5 +1,8 @@
 
+
 ```
+## The moment the first ant falls off the board
+
 We have a wooden plank of the length n units.  
 Two ants are walking on the plank,  
 each ant moves with a speed of 1 unit per round.  
@@ -27,6 +30,9 @@ Return number of rounds needed to get the first ant falls out of the plank.
 
 
 ```
+
+## Момент падения первого муравья с доски
+
 У нас есть деревянная доска длиной n единиц.  
 По доске ходят два муравья,  
 каждый муравей движется со скоростью 1 единица за раунд.  
@@ -58,6 +64,9 @@ Constraints:
 0 <= right <= n  
 left != right
 
+
+\
+\
 ![image_1](image_1.png)
 ![image_2](image_2.png)
 

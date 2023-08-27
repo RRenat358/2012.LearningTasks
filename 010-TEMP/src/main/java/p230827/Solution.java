@@ -3,7 +3,7 @@ package p230827;
 import static java.lang.Math.abs;
 import static java.lang.Math.min;
 
-public class Solution01 {
+public class Solution {
 
     public int momentAntFall(int n, int left, int right) {
         if (left < right) {

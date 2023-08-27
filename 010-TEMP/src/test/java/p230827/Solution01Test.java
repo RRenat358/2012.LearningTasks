@@ -7,6 +7,7 @@ class Solution01Test {
 
     // momentAntFall(n, left, right) = expectedRounds
 
+    //======================================================================
     @Test
     void momentAntFall_imageExample1() {
         Assertions.assertEquals(2, new Solution01()
@@ -31,6 +32,41 @@ class Solution01Test {
                 .momentAntFall(3, 3, 1));
     }
 
+    //======================================================================
+    // left < right
+    @Test
+    void momentAntFall_leftLessRight_1() {
+        Assertions.assertEquals(2, new Solution01()
+                .momentAntFall(10, 8, 9));
+    }
+
+    //======================================================================
+    // left > right
+    @Test
+    void momentAntFall_leftGreatRight_1() {
+        Assertions.assertEquals(1, new Solution01()
+                .momentAntFall(10, 10, 9));
+    }
+    @Test
+    void momentAntFall_leftGreatRight_2() {
+        Assertions.assertEquals(2, new Solution01()
+                .momentAntFall(10, 10, 8));
+    }
+    @Test
+    void momentAntFall_leftGreatRight_3() {
+        Assertions.assertEquals(3, new Solution01()
+                .momentAntFall(3, 3, 0));
+    }
+    @Test
+    void momentAntFall_leftGreatRight_4() {
+        Assertions.assertEquals(1, new Solution01()
+                .momentAntFall(3, 1, 0));
+    }
+    @Test
+    void momentAntFall_leftGreatRight_5() {
+        Assertions.assertEquals(2, new Solution01()
+                .momentAntFall(3, 2, 0));
+    }
 
 
 

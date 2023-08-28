@@ -86,11 +86,17 @@ class SolutionTest {
 
     @DisplayName(" 0 1 2 3 4 5 6 7 ▶ ◀ 10 ")
     @Test
-    void momentAntFall_leftGreatRight_1() {
+    void momentAntFall_leftGreatRight_98() {
         Assertions.assertEquals(2, new Solution()
                 .momentAntFall(10, 9, 8));
     }
 
+    @DisplayName(" 0 1 2 3 4 5 ▶ 7 8 ◀ 10 ")
+    @Test
+    void momentAntFall_leftGreatRight_96() {
+        Assertions.assertEquals(4, new Solution()
+                .momentAntFall(10, 9, 6));
+    }
 
 
     //======================================================================
@@ -123,6 +129,9 @@ class SolutionTest {
         Assertions.assertEquals(2, new Solution()
                 .momentAntFall(3, 2, 0));
     }
+
+
+
 
 
 }

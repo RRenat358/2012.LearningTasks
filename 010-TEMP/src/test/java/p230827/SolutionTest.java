@@ -53,6 +53,15 @@ class SolutionTest {
                 .momentAntFall(10, 1, 2));
     }
 
+    @DisplayName(" 0 ◀ 2 3 ▶ 5 6 7 8 9 10 ")
+    @Test
+    void momentAntFall_leftLessRight_14() {
+        Assertions.assertEquals(2, new Solution()
+                .momentAntFall(10, 1, 4));
+    }
+
+
+
     @DisplayName(" 0 1 2 3 4 ◀ ▶ 7 8 9 10 ")
     @Test
     void momentAntFall_leftLessRight_56() {
@@ -60,12 +69,22 @@ class SolutionTest {
                 .momentAntFall(10, 5, 6));
     }
 
+
+    @DisplayName(" 0 1 2 3 4 5 ◀ 7 8 ▶ 10 ")
+    @Test
+    void momentAntFall_leftLessRight_69() {
+        Assertions.assertEquals(2, new Solution()
+                .momentAntFall(10, 6, 9));
+    }
+
+
     @DisplayName(" 0 1 2 3 4 5 6 7 ◀ ▶ 10 ")
     @Test
     void momentAntFall_leftLessRight_89() {
         Assertions.assertEquals(2, new Solution()
                 .momentAntFall(10, 8, 9));
     }
+
 
     //======================================================================
     // left > right

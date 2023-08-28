@@ -8,6 +8,7 @@ class SolutionTest {
 
     // momentAntFall(n, left, right) = expectedRounds
 
+    // визуализация доски с муравьями для лучшего представления
     //   ←   →
     // □ ■ □ ■ □ □ □ □ □ □ □
     // 0 ◀ 2 ▶ 4 5 6 7 8 9 10
@@ -60,15 +61,12 @@ class SolutionTest {
                 .momentAntFall(10, 1, 4));
     }
 
-
-
     @DisplayName(" 0 1 2 3 4 ◀ ▶ 7 8 9 10 ")
     @Test
     void momentAntFall_leftLessRight_56() {
         Assertions.assertEquals(5, new Solution()
                 .momentAntFall(10, 5, 6));
     }
-
 
     @DisplayName(" 0 1 2 3 4 5 ◀ 7 8 ▶ 10 ")
     @Test
@@ -77,7 +75,6 @@ class SolutionTest {
                 .momentAntFall(10, 6, 9));
     }
 
-
     @DisplayName(" 0 1 2 3 4 5 6 7 ◀ ▶ 10 ")
     @Test
     void momentAntFall_leftLessRight_89() {
@@ -85,15 +82,14 @@ class SolutionTest {
                 .momentAntFall(10, 8, 9));
     }
 
-
     //======================================================================
     // left > right
 
     @DisplayName(" 0 ▶ ◀ 3 4 5 6 7 8 9 10 ")
     @Test
-    void momentAntFall_leftGreatRight_31() {
+    void momentAntFall_leftGreatRight_21() {
         Assertions.assertEquals(2, new Solution()
-                .momentAntFall(10, 3, 1));
+                .momentAntFall(10, 2, 1));
     }
 
     @DisplayName(" 0 1 2 3 4 ▶ ◀ 7 8 9 10 ")
@@ -117,9 +113,8 @@ class SolutionTest {
                 .momentAntFall(10, 9, 6));
     }
 
-
     //======================================================================
-    // ?не нужны, это дубли?
+    // дополнительные проверки, но возможно это лишнее
 
     @DisplayName(" 0 1 2 3 4 5 6 7 ▶ 9 ◀ ")
     @Test
@@ -127,6 +122,21 @@ class SolutionTest {
         Assertions.assertEquals(2, new Solution()
                 .momentAntFall(10, 10, 8));
     }
+
+    @DisplayName(" 0 ▶ 2 3 4 5 6 7 8 ◀ 10 ")
+    @Test
+    void momentAntFall_leftGreatRight_91() {
+        Assertions.assertEquals(9, new Solution()
+                .momentAntFall(10, 9, 1));
+    }
+
+    @DisplayName(" 0 ▶ 2 3 4 5 6 7 ◀ 9 10 ")
+    @Test
+    void momentAntFall_leftGreatRight_81() {
+        Assertions.assertEquals(8, new Solution()
+                .momentAntFall(10, 8, 1));
+    }
+
 
     @DisplayName(" ▶ 1 2 ◀ ")
     @Test
@@ -148,9 +158,6 @@ class SolutionTest {
         Assertions.assertEquals(2, new Solution()
                 .momentAntFall(3, 2, 0));
     }
-
-
-
 
 
 }

@@ -8,19 +8,23 @@ public class Solution {
     public int momentAntFall(int n, int left, int right) {
 
         if (left < right) {
-            return min(n - left, n - right) + 1;
+            return min(left, n - right) + 1;
         }
 
-        return abs(left - right);
+
+        if (left > right) {
+
+//            left = n - left + (left - right);
+//            right = right + (left - right);
+
+//            left = n - left + (left - right);
+//            right = right + (left - right);
+
+            return min(n - left, right) + (left - right);
+        }
 
 
-
-
-
-
-
-
-
+        return 0;
 
 
     }
